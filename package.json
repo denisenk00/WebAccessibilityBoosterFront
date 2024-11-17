@@ -1,34 +1,36 @@
 {
-  "name": "front-app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "arrive": "^2.4.1",
-    "axios": "^0.20.0",
-    "highlight.js": "^11.10.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-dropzone": "^14.3.5",
-    "react-highlight": "^0.15.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
-    "reactstrap": "^9.2.3"
-  },
+  "name": "html-accessibility-processor",
+  "version": "1.0.0",
+  "description": "A React-based tool for processing HTML files and improving web accessibility.",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "keywords": [
+    "react",
+    "html",
+    "accessibility",
+    "drag-and-drop",
+    "xpath"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
+    "react-router-dom": "^6.28.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
+    "eslint": "^8.47.0",
+    "eslint-plugin-react": "^7.32.2"
   },
   "browserslist": {
     "production": [
