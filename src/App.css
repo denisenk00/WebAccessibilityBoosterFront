@@ -121,18 +121,16 @@ header {
   background-color: yellow;
 }
 
-.spinner {
-  margin: 20px auto;
-  border: 4px solid #ddd;
-  border-top: 4px solid #007bff;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  animation: spin 1s linear infinite;
+.spinner-container {
+  display: flex; /* Встановлює flexbox */
+  justify-content: center; /* Горизонтальне вирівнювання */
+  align-items: center; /* Вертикальне вирівнювання */
+  min-height: 100px; /* Мінімальна висота контейнера */
+  margin-top: 100px; /* Відступ зверху */
+  margin-bottom: 100px; /* Відступ знизу */
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+.spinnerText {
+  margin-right: 50px;
 }
+

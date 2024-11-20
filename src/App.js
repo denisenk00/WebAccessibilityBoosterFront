@@ -3,9 +3,9 @@ import FileDropZone from "./components/FileDropZone";
 import HTMLViewer from "./components/HTMLViewer";
 import Table1 from "./components/Table1";
 import Table2 from "./components/Table2";
-import LoadingSpinner from "./components/LoadingSpinner";
 import {copyToClipboard, saveToFile} from "./Utility";
 import "./App.css";
+import {PacmanLoader} from "react-spinners";
 
 const App = () => {
   const [fileText, setFileText] = useState("");
@@ -18,10 +18,10 @@ const App = () => {
   const [loading, setLoading] = useState(false);
 
   const handleFileUpload = async (html, fileName) => {
+    setLoading(true);
     setFileText(html);
     //setInnerHtml(html)
     setDraggedFileName(fileName);
-    setLoading(true);
     try {
       const response = await fetch("http://localhost:8080/ai/analyse", {
         method: "POST",
@@ -44,16 +44,15 @@ const App = () => {
         <header>
           <h1>HTML Accessibility Processor</h1>
         </header>
-        <body>
         {!fileText && (
             <>
               <FileDropZone onUpload={handleFileUpload} />
-              {loading && <LoadingSpinner />}
             </>
         )}
-        {fileText && (
+        {fileText && <HTMLViewer fileText={fileText} setFileText={setFileText} xpath={xpath} />}
+        {loading && <div className="spinner-container"><h1 className="spinnerText">Аналізуємо</h1><PacmanLoader size={50}/></div>}
+        {summary && (
             <>
-              <HTMLViewer fileText={fileText} setFileText={setFileText} xpath={xpath} />
               <Table1
                   entries={table1Entries}
                   setEntries={setTable1Entries}
@@ -72,7 +71,6 @@ const App = () => {
               </div>
             </>
         )}
-        </body>
       </div>
   );
 };

@@ -1,4 +1,6 @@
 import React, {useEffect, useRef, useState} from "react";
+import "../docco.css"
+//import Highlight from 'react-highlight';
 
 const HTMLViewer = ({ fileText, setFileText, xpath}) => {
     const contentRef = useRef(null);
@@ -97,18 +99,20 @@ const HTMLViewer = ({ fileText, setFileText, xpath}) => {
         };
 
     return (
-        <div
-            ref={contentRef}
-            contentEditable
-            className="html-viewer"
-            onKeyDown={handleKeyDown}
-            onKeyUp={refreshInnerHtml}
-            onBlur={handleOnBlur}
-            style={{ border: "1px solid black", padding: "10px", whiteSpace: "pre-wrap" }}
-            //dangerouslySetInnerHTML={{ __html: fileText }} рендерить
-        >
-      {fileText}
-    </div>
+       // <Highlight>
+            <div
+                ref={contentRef}
+                contentEditable
+                className="html-viewer"
+                onKeyDown={handleKeyDown}
+                //onKeyUp={refreshInnerHtml}
+                onBlur={handleOnBlur}
+                style={{ border: "1px solid black", padding: "10px", whiteSpace: "pre-wrap" }}
+                //dangerouslySetInnerHTML={{ __html: fileText }} рендерить
+            >
+                {fileText}
+            </div>
+       // </Highlight>
     );
 };
 

@@ -22,8 +22,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.3",
+    "react-highlight": "^0.15.0",
     "react-router-dom": "^6.28.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "react-spinners": "^0.14.1"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
