@@ -8,6 +8,6 @@ export const saveToFile = (text, fileName) => {
 
  export const copyToClipboard = (fileText) => {
     navigator.clipboard.writeText(fileText);
-    alert("Copied to clipboard!");
+    alert("Скопійовано в буфер!");
  };
 

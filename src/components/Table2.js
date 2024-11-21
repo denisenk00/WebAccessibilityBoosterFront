@@ -4,8 +4,8 @@ const Table2 = ({ entries }) => (
     <table className="table2">
         <thead>
         <tr>
-            <th>Category</th>
-            <th>Error Count</th>
+            <th>Категорія</th>
+            <th>Кількість помилок</th>
         </tr>
         </thead>
         <tbody>

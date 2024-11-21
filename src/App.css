@@ -1,71 +1,3 @@
-/*.App {*/
-/*  text-align: center;*/
-/*  background-color: #804d4d;*/
-/*}*/
-
-/*.App-logo {*/
-/*  height: 40vmin;*/
-/*  pointer-events: none;*/
-/*}*/
-
-/*@media (prefers-reduced-motion: no-preference) {*/
-/*  .App-logo {*/
-/*    animation: App-logo-spin infinite 20s linear;*/
-/*  }*/
-/*}*/
-
-
-
-/*.App-link {*/
-/*  color: #61dafb;*/
-/*}*/
-
-/*@keyframes App-logo-spin {*/
-/*  from {*/
-/*    transform: rotate(0deg);*/
-/*  }*/
-/*  to {*/
-/*    transform: rotate(360deg);*/
-/*  }*/
-/*}*/
-
-/*.dropzone {*/
-/*  border: 4px dashed #e70707;*/
-/*  height: 200px;*/
-/*  width: 80%;*/
-/*  padding: 20px;*/
-/*  text-align: center;*/
-/*  margin: 0 auto;*/
-/*  cursor: pointer;*/
-/*}*/
-
-/*.file-text {*/
-/*  background-color: #f9f9f9;*/
-/*  padding: 10px;*/
-/*  white-space: pre-wrap;*/
-/*  font-family: monospace;*/
-/*  overflow-x: auto;*/
-/*}*/
-
-
-/*.highlight {*/
-/*  background-color: #ffeb3b;*/
-/*  border: 1px solid #ffc107;*/
-/*}*/
-
-/*header {*/
-/*  background-color: black;*/
-/*  color: white;*/
-/*  padding: 0px;*/
-/*  margin-bottom: 30px;*/
-/*  height: 80px;*/
-/*  text-align: center;*/
-/*}*/
-/*h1 {*/
-/*  margin: 0px;*/
-/*  padding: 10px;*/
-/*}*/
-
 body {
   background-color: #ffffff;
 }
@@ -132,5 +64,128 @@ header {
 
 .spinnerText {
   margin-right: 50px;
+}
+
+
+
+.summary {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #faeeee;
+  border-left: 4px solid #e70707;
+  border-radius: 4px;
+}
+
+.summary h4 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.summary p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+  background-color: #a70000;
+}
+
+.actions button:active {
+  background-color: #a70000;
+}
+
+.actions button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* General Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+table th, table td {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #333;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+
+table tbody tr:hover {
+  background-color: #f1f8ff;
+}
+
+/* Table1 Specific Styles */
+.table1 th, .table1 td {
+  text-align: center;
+}
+
+.table1 td button {
+  padding: 10px 15px;
+  margin-right: 20px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.table1 td button:hover {
+  background-color: #a70000;
+}
+
+.table1 td button:active {
+  background-color: #a70000;
+}
+
+/* Table2 Specific Styles */
+.table2 th, .table2 td {
+  text-align: left;
+}
+
+.table2 td {
+  font-weight: normal;
+}
+
+.table2 tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.dropzone p {
+  margin: 200px;
 }
 

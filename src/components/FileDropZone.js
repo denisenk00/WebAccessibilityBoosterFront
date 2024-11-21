@@ -14,7 +14,7 @@ const FileDropZone = ({ onUpload }) => {
             {({ getRootProps, getInputProps }) => (
                 <div {...getRootProps()} className="dropzone">
                     <input {...getInputProps()} />
-                    <p>Drag & drop HTML file here, or click to select file</p>
+                    <p>Перетягніть HTML файл сюди або натисніть, щоб вибрати файл</p>
                 </div>
             )}
         </Dropzone>

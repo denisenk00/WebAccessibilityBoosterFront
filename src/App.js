@@ -42,7 +42,7 @@ const App = () => {
   return (
       <div className="app">
         <header>
-          <h1>HTML Accessibility Processor</h1>
+          <h1>AI Accessibility Enhancer</h1>
         </header>
         {!fileText && (
             <>
@@ -62,12 +62,12 @@ const App = () => {
               />
               <Table2 entries={table2Entries} />
               <div className="summary">
-                <h4>Summary</h4>
+                <h4>Резюме</h4>
                 <p>{summary}</p>
               </div>
               <div className="actions">
-                <button onClick={() => saveToFile(fileText, draggedFileName)}>Save to File</button>
-                <button onClick={() => copyToClipboard(fileText)}>Copy</button>
+                <button onClick={() => saveToFile(fileText, draggedFileName)}>Зберегти в файл</button>
+                <button onClick={() => copyToClipboard(fileText)}>Скопіювати</button>
               </div>
             </>
         )}

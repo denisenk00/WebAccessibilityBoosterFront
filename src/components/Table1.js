@@ -17,7 +17,14 @@ const Table1 = ({ entries, setEntries, fileText, setFileText, setXpath}) => {
 
   // Обробка видалення елемента з таблиці
   const handleDelete = (index) => {
-    setEntries(entries.filter((_, i) => i !== index));
+      // Create the filtered entries
+      const updatedEntries = entries.filter((_, i) => i !== index);
+      // Update the state with the filtered entries
+      setEntries(updatedEntries);
+      // Check if the updated entries are empty
+      if (updatedEntries.length === 0) {
+          alert("Всі помилки виправлено!");
+      }
   };
 
     return (
@@ -26,9 +33,9 @@ const Table1 = ({ entries, setEntries, fileText, setFileText, setXpath}) => {
             <tr>
                 <th>#</th>
                 <th>XPath</th>
-                <th>Corrected HTML Tag</th>
-                <th>Comment</th>
-                <th>Actions</th>
+                <th>Рекомендований HTML тег</th>
+                <th>Коментар</th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
@@ -43,8 +50,8 @@ const Table1 = ({ entries, setEntries, fileText, setFileText, setXpath}) => {
                     <td>{entry.correctedHtmlTag}</td>
                     <td>{entry.comment}</td>
                     <td>
-                        <button onClick={() => handleReplace(index, entry.xpath, entry.correctedHtmlTag)}>Apply</button>
-                        <button onClick={() => handleDelete(index)}>Refuse</button>
+                        <button onClick={() => handleReplace(index, entry.xpath, entry.correctedHtmlTag)}>Застосувати</button>
+                        <button onClick={() => handleDelete(index)}>Видалити</button>
                     </td>
                 </tr>
             ))}
