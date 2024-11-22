@@ -12,7 +12,7 @@ const Table1 = ({ entries, setEntries, fileText, setFileText, setXpath}) => {
             setFileText(doc.documentElement.outerHTML);
             // Видаляємо рядок з таблиці
             setEntries(entries.filter((_, i) => i !== index));
-        }
+        } else alert("Елемент не знайдено")
     };
 
   // Обробка видалення елемента з таблиці
@@ -50,8 +50,10 @@ const Table1 = ({ entries, setEntries, fileText, setFileText, setXpath}) => {
                     <td>{entry.correctedHtmlTag}</td>
                     <td>{entry.comment}</td>
                     <td>
-                        <button onClick={() => handleReplace(index, entry.xpath, entry.correctedHtmlTag)}>Застосувати</button>
-                        <button onClick={() => handleDelete(index)}>Видалити</button>
+                        <div className="actions">
+                            <button onClick={() => handleReplace(index, entry.xpath, entry.correctedHtmlTag)}>Застосувати</button>
+                            <button onClick={() => handleDelete(index)}>Видалити</button>
+                        </div>
                     </td>
                 </tr>
             ))}

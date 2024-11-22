@@ -9,7 +9,6 @@ import {PacmanLoader} from "react-spinners";
 
 const App = () => {
   const [fileText, setFileText] = useState("");
-    //const [innerHtml, setInnerHtml] = useState("");
   const [draggedFileName, setDraggedFileName] = useState("");
   const [xpath, setXpath] = useState("");
   const [table1Entries, setTable1Entries] = useState([]);
@@ -20,7 +19,6 @@ const App = () => {
   const handleFileUpload = async (html, fileName) => {
     setLoading(true);
     setFileText(html);
-    //setInnerHtml(html)
     setDraggedFileName(fileName);
     try {
       const response = await fetch("http://localhost:8080/ai/analyse", {
